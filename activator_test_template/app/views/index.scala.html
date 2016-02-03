@@ -1,0 +1,17 @@
+@(myForm: Form[User])
+
+
+@main("Test GET/POST (in)") {
+
+    @helper.form(action = routes.Application.submit()) {
+    
+       @helper.inputText(myForm("username"))
+    
+       @helper.inputPassword(myForm("password"))
+    
+       <input type="submit" value="VALIDER">
+    
+   }
+
+}
+
